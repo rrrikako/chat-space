@@ -42,6 +42,7 @@ Things you may want to cover:
 |------|----|-------|
 |name|text|null: false|
 |email|string|null: false|
+|password|text|null: false|
 |users_groups_id|integer|foreign_key: true|
 
 ### Association
