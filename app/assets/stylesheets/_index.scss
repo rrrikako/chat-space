@@ -1,0 +1,132 @@
+
+.sider{
+  background-color: #2f3e51;
+  height: 100vh;
+  width: 300px;
+  float: left;
+  display: inline-block;
+  .sider__top{
+    background-color: #202b38;
+    height: 96px;
+    color: $white;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 96px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    &__btn{
+      display: inline-block;
+      position: absolute;
+      right: 20px;
+    }
+  }
+  .sider__li{
+    margin-bottom: 40px;
+    padding-left: 20px;
+    color: $white;
+    font-weight: bold;
+    &__name{
+      font-size: 15px;
+      padding-bottom: 5px;
+    }
+    &__text{
+      font-size: 11px;
+    }
+  }
+}
+.contents{
+  background-color: #fafafa;
+  height: 100vh;
+  width: calc(100vw - 300px);
+  display: inline-block;
+  .contents__top{
+    height: 96px;
+    border-bottom: solid;
+    border-bottom-color: #eeeeee;
+    border-width: 0.7px;
+    position: relative;
+    &__logo{
+      display: inline-block;
+      font-size: 20px;
+      color: #333333;
+      margin: 35px 0 15px 0;
+      padding-left: 40px;
+    }
+    &__member{
+      font-size: 12px;
+      color: #999999;
+      margin-left: 40px;
+    }
+    &__edit{
+      display: inline-block;
+      position: absolute;
+      right: 0px;
+      margin-top: 28px;
+      margin-right: 40px;
+      padding: 0 20px;
+      line-height: 40px;
+      color: $light_blue;
+      border-style: solid;
+      border-color: $light_blue;
+      border-width: 0.5px;
+    }
+  }
+  .contents__li{
+    margin-top: 46px;
+    margin-bottom: 40px;
+    margin-left: 40px;
+    &__name{
+      display: inline-block;
+      font-size: 20px;
+    }
+    &__date{
+      display: inline-block;
+      font-size: 12px;
+      color: #999999;
+      margin-left: 10px;
+    }
+    &__text{
+      padding-top: 10px;
+    }
+  }
+  .contents__bottom{
+    background-color: rgb(224, 221, 221);
+    height: 100px;
+    width: calc(100vw - 300px);
+    position: absolute;
+    bottom: 0;
+    .contents__bottom--white{
+      background-color:$white;
+      width: 900px;
+      height: 50px;
+      margin: 25px 0 25px 40px;
+      padding-left: 10px;
+      font-size: 16px;
+      color: #434a54;
+      line-height: 50px;
+      position: relative;
+      float: left;
+      .contents__bottom__btn{
+        display: inline-block;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%)
+      }
+    }
+    &__send{
+      display: inline-block;
+      background-color: $light_blue;
+      height: 50px;
+      width: 100px;
+      margin-left: 15px;
+      margin-top: 25px;
+      font-size: 20px;
+      text-align: center;
+      line-height: 50px;
+      color: $white;
+    }
+  }
+}
+

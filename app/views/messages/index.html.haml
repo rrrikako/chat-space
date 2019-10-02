@@ -1,0 +1,52 @@
+.sider
+  .sider__top
+    seo
+    .sider__top__btn
+      = fa_icon 'edit'
+      = fa_icon 'cog'
+  .sider__li
+    .sider__li__name
+      sample1
+    .sider__li__text
+      samaple1
+  .sider__li
+    .sider__li__name
+      sample2
+    .sider__li__text
+      sample2
+.contents
+  .contents__top
+    .contents__top__logo
+      sample
+    .contents__top__edit
+      Edit
+    .contents__top__member
+      Member: sample
+  .contents__li
+    .contents__li__name
+      seo
+    .contents__li__date
+      2019/05/22(Mon) 11:45
+    .contents__li__text
+      Hello world!
+  .contents__bottom
+    .contents__bottom--white
+      type a message
+    .contents__bottom__send
+      Send
+      -# <form action="./filesend.cgi" method="post" enctype="multipart/form-data">
+      -#   %label
+      -#     <span class="filelabel" title="ファイルを選択">
+      -#      = fa_icon 'image'
+      -#     </span>
+      -#    <input type="file" name="datafile" id="filesend">
+      -# ＜/form>
+-# %input{:type => file, :class => "fas fa-image"}
+-# = form_for [@group,@message] do |f|
+-#   .message-box  
+-#     %i.fa.fa-image
+-#     = f.file_field :image
+-# = form_for :class "get_file" do |f|
+-#   = f.file_field :avatar
+
+
