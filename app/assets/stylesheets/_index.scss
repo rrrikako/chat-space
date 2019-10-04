@@ -5,7 +5,7 @@
   width: 300px;
   float: left;
   display: inline-block;
-  .sider__top{
+  &__top{
     background-color: #202b38;
     height: 96px;
     color: $white;
@@ -28,7 +28,7 @@
       }
     }
   }
-  .sider__li{
+  &__li{
     margin-bottom: 40px;
     padding-left: 20px;
     color: $white;
@@ -47,7 +47,7 @@
   height: 100vh;
   width: calc(100vw - 300px);
   display: inline-block;
-  .contents__top{
+  &__top{
     height: 96px;
     border-bottom: solid;
     border-bottom-color: #eeeeee;
@@ -80,7 +80,7 @@
       font-size: 20px;
     }
   }
-  .contents__li{
+  &__li{
     margin-top: 46px;
     margin-bottom: 40px;
     margin-left: 40px;
@@ -98,13 +98,13 @@
       padding-top: 10px;
     }
   }
-  .contents__bottom{
+  &__bottom{
     background-color: rgb(224, 221, 221);
     height: 100px;
     width: calc(100vw - 300px);
     position: absolute;
     bottom: 0;
-    .contents__bottom--white{
+    &--white{
       background-color:$white;
       width: 900px;
       height: 50px;
@@ -123,7 +123,7 @@
         }
       }
     }
-    .contents__bottom__send{
+    &__send{
       display: inline-block;
       background-color: $light_blue;
       height: 50px;
