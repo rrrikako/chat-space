@@ -1,47 +1,3 @@
-
-.sider{
-  background-color: #2f3e51;
-  height: 100vh;
-  width: 300px;
-  float: left;
-  display: inline-block;
-  &__top{
-    background-color: #202b38;
-    height: 96px;
-    color: $white;
-    font-size: 16px;
-    font-weight: bold;
-    line-height: 96px;
-    padding-left: 20px;
-    margin-bottom: 20px;
-    position: relative;
-    &__btn{
-      display: inline-block;
-      position: absolute;
-      right: 20px;
-      color: white;
-      &--setup{
-        right: 0px;
-      }
-      &--text{
-        margin-right: 10px;
-      }
-    }
-  }
-  &__li{
-    margin-bottom: 40px;
-    padding-left: 20px;
-    color: $white;
-    font-weight: bold;
-    &__name{
-      font-size: 15px;
-      padding-bottom: 5px;
-    }
-    &__text{
-      font-size: 11px;
-    }
-  }
-}
 .contents{
   background-color: #fafafa;
   height: 100vh;
@@ -73,11 +29,14 @@
       margin-right: 40px;
       padding: 0 20px;
       line-height: 40px;
-      color: $light_blue;
       border-style: solid;
       border-color: $light_blue;
       border-width: 0.5px;
-      font-size: 20px;
+      &__logo{
+        color: $light_blue;
+        font-size: 20px;
+        text-decoration: none;
+      }
     }
   }
   &__li{
@@ -137,4 +96,5 @@
     }
   }
 }
+
 

@@ -1,27 +1,11 @@
-.sider
-  .sider__top
-    seo
-    .sider__top__btn
-      =link_to "#", class: "sider__top__btn sider__top__btn--text" do
-        = fa_icon 'edit'
-      =link_to "#", class: "sider__top__btn sider__top__btn--setup" do
-        = fa_icon 'cog'
-  .sider__li
-    .sider__li__name
-      sample1
-    .sider__li__text
-      samaple1
-  .sider__li
-    .sider__li__name
-      sample2
-    .sider__li__text
-      sample2
+= render './shared/side_bar'
 .contents
   .contents__top
     .contents__top__logo
       sample
     %button.contents__top__edit
-      Edit
+      = link_to edit_group_path(1), class: "contents__top__edit__logo" do
+        Edit
     .contents__top__member
       Member: sample
   .contents__li
