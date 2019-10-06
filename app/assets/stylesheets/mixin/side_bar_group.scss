@@ -1,0 +1,13 @@
+@mixin group{
+  margin-bottom: 40px;
+  .group__name{
+    font-size: 15px;
+    margin-bottom: 5px;
+    color: $white;
+    font-weight: bold
+  }
+  .group__message{
+    font-size: 11px;
+    color: $white;
+  }
+}

@@ -1,0 +1,39 @@
+.side-bar{
+  background-color: $side_blue_light;
+  height: 100vh;
+  width: 300px;
+  float: left;
+  .header{
+    background-color: #202b38;
+    height: 96px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    font-weight: bold;
+    .header__name{
+      display: inline-block;
+      font-size: 16px;
+      line-height: 96px;
+      color: $white;
+      font-weight: bold;
+    }
+    .header__lists{
+      display: inline-block;
+      position: absolute;
+      right: 20px;
+      .list{
+        display: inline-block;
+        line-height: 96px;
+        .icon{
+          color: $white;
+        }
+      }
+    }
+  }
+  .groups{
+    padding-left: 20px;
+    .group{
+      @include group;
+    }
+  }
+}
