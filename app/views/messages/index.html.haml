@@ -1,28 +1,29 @@
-= render './shared/side_bar'
-.header
-  .header__logo
-    = @group.name
-  %button.header__edit
-    = link_to edit_group_path(@group), class: "header__edit__logo" do
-      Edit
-  .header__member
-    .header__member__logo
-      Member:
-    .header__member__name
-      - @group.users.each do |user|
-        = user.name
-.contents
-  .contents__messages
-    = render @messages
-.footer
-  .form
-    = form_for [@group, @message] do |f|
-      = f.text_field :content, class: 'form__message', placeholder: 'type a message'
-      .form__mask
-        = f.label :image, class: 'form__mask__image' do
-          = fa_icon 'picture-o', class: 'icon'
-          = f.file_field :image, class: 'hidden'
-      = f.submit 'Send', class: 'button'
+.wrapper
+  = render './shared/side_bar'
+  .header
+    .header__logo
+      = @group.name
+    %button.header__edit
+      = link_to edit_group_path(@group), class: "header__edit__logo" do
+        Edit
+    .header__member
+      .header__member__logo
+        Member:
+      .header__member__name
+        - @group.users.each do |user|
+          = user.name
+  .contents
+    .contents__messages
+      = render @messages
+  .footer
+    .form
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+        .form__mask
+          = f.label :image, class: 'form__mask__image' do
+            = fa_icon 'picture-o', class: 'icon'
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'button'
 
 
 

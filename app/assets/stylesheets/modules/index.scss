@@ -1,109 +1,112 @@
-.header{
-  height: 96px;
-  width: calc(100vw - 300px);
-  background-color: $white;
-  border-bottom: solid;
-  border-bottom-color: #eeeeee;
-  border-width: 0.7px;
-  position: relative;
-  position: fixed;
-  right: 0px;
-  top: 0px;
-  margin-left: 300px;
-  &__logo{
-    display: inline-block;
-    font-size: 20px;
-    color: #333333;
-    margin: 35px 0 15px 0;
-    padding-left: 40px;
+.wrapper{
+  .header{
+    height: 96px;
+    width: calc(100vw - 300px);
+    background-color: $white;
+    border-bottom: solid;
+    border-bottom-color: #eeeeee;
+    border-width: 0.7px;
     position: relative;
-  }
-  &__member{
-    font-size: 12px;
-    color: black;
-    margin-left: 40px;
-    bottom: 3px;
-    position: absolute;
-    &__logo{
-      display: inline-block;
-    }
-    &__name{
-      display: inline-block;
-    }
-  }
-  &__edit{
-    display: inline-block;
-    position: absolute;
+    position: fixed;
     right: 0px;
-    margin-top: 28px;
-    margin-right: 40px;
-    padding: 0 20px;
-    line-height: 40px;
-    border-style: solid;
-    border-color: $light_blue;
-    border-width: 0.5px;
+    top: 0px;
+    margin-left: 300px;
     &__logo{
-      color: $light_blue;
+      display: inline-block;
       font-size: 20px;
-      text-decoration: none;
+      color: #333333;
+      margin: 35px 0 15px 0;
+      padding-left: 40px;
+      position: relative;
     }
-  }
-}
-.contents{
-  margin-left: 300px;
-  &__messages{
-    .message{
-      margin-top: 46px;
-      margin-bottom: 40px;
+    &__member{
+      font-size: 12px;
+      color: black;
       margin-left: 40px;
-      @include message_block;
-    }
-  }
-}
-.footer{
-  background-color: rgb(224, 221, 221);
-  height: 100px;
-  width: calc(100vw - 300px);
-  position: absolute;
-  bottom: 0;
-  right: 0px;
-  position: fixed;
-  .form__message{
-    float: left;
-    height: 50px;
-    width: calc(100vw - 500px);
-    bottom: 25px;
-    margin-top: 50px;
-    margin-left: 40px;
-    position: relative;
-    float: left;
-    padding-left: 10px;
-  } 
-  .form__mask{
-    display: inline-block;
-    .hidden{
-      display: none;
-    }
-    .icon{
+      bottom: 3px;
       position: absolute;
-      right: 170px;
-      font-size: 25px;
-      margin-top: 20px;
+      &__logo{
+        display: inline-block;
+      }
+      &__name{
+        display: inline-block;
+      }
+    }
+    &__edit{
+      display: inline-block;
+      position: absolute;
+      right: 0px;
+      margin-top: 28px;
+      margin-right: 40px;
+      padding: 0 20px;
+      line-height: 40px;
+      border-style: solid;
+      border-color: $light_blue;
+      border-width: 0.5px;
+      &__logo{
+        color: $light_blue;
+        font-size: 20px;
+        text-decoration: none;
+      }
     }
   }
-  .button{
-    display: inline-block;
-    height: 50px;
-    width: 100px;
-    color: $white;
-    float: right;
-    margin-right: 40px;
-    margin-top: 25px;
-    line-height: 50px;
-    background-color:$light_blue;
+  .contents{
+    margin-left: 300px;
+    padding-top: 96px;
+    padding-bottom: 100px;
+    &__messages{
+      .message{
+        margin-top: 46px;
+        margin-bottom: 40px;
+        margin-left: 40px;
+        @include message_block;
+      }
+    }
+  }
+  .footer{
+    background-color: rgb(224, 221, 221);
+    height: 100px;
+    width: calc(100vw - 300px);
+    position: absolute;
+    bottom: 0;
+    right: 0px;
+    position: fixed;
+    .form__message{
+      float: left;
+      height: 50px;
+      width: calc(100vw - 500px);
+      bottom: 25px;
+      margin-top: 50px;
+      margin-left: 40px;
+      position: relative;
+      float: left;
+      padding-left: 10px;
+    } 
+    .form__mask{
+      display: inline-block;
+      .hidden{
+        display: none;
+      }
+      .icon{
+        position: absolute;
+        right: 170px;
+        font-size: 25px;
+        margin-top: 20px;
+      }
+    }
+    .button{
+      display: inline-block;
+      height: 50px;
+      width: 100px;
+      color: $white;
+      float: right;
+      margin-right: 40px;
+      margin-top: 25px;
+      line-height: 50px;
+      background-color:$light_blue;
+    }
   }
 }
-
 
 
 
