@@ -63,38 +63,40 @@
     width: calc(100vw - 300px);
     position: absolute;
     bottom: 0;
-    &--white{
-      background-color:$white;
-      width: 900px;
+    .form__message{
+      float: left;
       height: 50px;
-      margin: 25px 0 25px 40px;
-      padding-left: 10px;
-      font-size: 16px;
-      color: #434a54;
-      line-height: 50px;
+      width: calc(100vw - 500px);
+      bottom: 25px;
+      margin-top: 50px;
+      margin-left: 40px;
       position: relative;
       float: left;
-      label.contents__bottom__file{
-        position: absolute;
-        right: 10px;
-        input.hidden{
+      padding-left: 10px;
+    } 
+    .form__mask{
+      display: inline-block;
+      .hidden{
         display: none;
-        }
+      }
+      .icon{
+        position: absolute;
+        right: 170px;
+        font-size: 25px;
+        margin-top: 20px;
       }
     }
-    &__send{
+    .button{
       display: inline-block;
-      background-color: $light_blue;
       height: 50px;
       width: 100px;
-      margin-left: 15px;
-      margin-top: 25px;
-      font-size: 20px;
-      text-align: center;
-      line-height: 50px;
       color: $white;
+      float: right;
+      margin-right: 40px;
+      margin-top: 25px;
+      line-height: 50px;
+      background-color:$light_blue;
     }
   }
 }
-
 
