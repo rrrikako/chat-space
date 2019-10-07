@@ -1,33 +1,30 @@
-= render './shared/side_bar'
-.contents
-  .contents__top
-    .contents__top__logo
-      sample
-    %button.contents__top__edit
-      = link_to edit_group_path(1), class: "contents__top__edit__logo" do
+.wrapper
+  = render './shared/side_bar'
+  .header
+    .header__logo
+      = @group.name
+    %button.header__edit
+      = link_to edit_group_path(@group), class: "header__edit__logo" do
         Edit
-    .contents__top__member
-      Member: sample
-  .contents__li
-    .contents__li__name
-      seo
-    .contents__li__date
-      2019/05/22(Mon) 11:45
-    .contents__li__text
-      Hello world!
-  .contents__bottom
-    %form 
-      .contents__bottom--white 
-        type a message
-        %label.contents__bottom__file
-          %i.fas.fa-image
-          %input(class="hidden" type="file")
-      %button.contents__bottom__send
-        Send
-      
+    .header__member
+      .header__member__logo
+        Member:
+      .header__member__name
+        - @group.users.each do |user|
+          = user.name
+  .contents
+    .contents__messages
+      = render @messages
+  .footer
+    .form
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+        .form__mask
+          = f.label :image, class: 'form__mask__image' do
+            = fa_icon 'picture-o', class: 'icon'
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'button'
 
--# = fa_icon 'image'
--# =link_to "#", class: "sider__top__btn sider__top__btn--edit"
 
 
 

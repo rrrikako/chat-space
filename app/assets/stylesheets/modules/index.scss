@@ -1,25 +1,36 @@
-.contents{
-  background-color: #fafafa;
-  height: 100vh;
-  width: calc(100vw - 300px);
-  display: inline-block;
-  &__top{
+.wrapper{
+  .header{
     height: 96px;
+    width: calc(100vw - 300px);
+    background-color: $white;
     border-bottom: solid;
     border-bottom-color: #eeeeee;
     border-width: 0.7px;
     position: relative;
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    margin-left: 300px;
     &__logo{
       display: inline-block;
       font-size: 20px;
       color: #333333;
       margin: 35px 0 15px 0;
       padding-left: 40px;
+      position: relative;
     }
     &__member{
       font-size: 12px;
-      color: #999999;
+      color: black;
       margin-left: 40px;
+      bottom: 3px;
+      position: absolute;
+      &__logo{
+        display: inline-block;
+      }
+      &__name{
+        display: inline-block;
+      }
     }
     &__edit{
       display: inline-block;
@@ -39,62 +50,63 @@
       }
     }
   }
-  &__li{
-    margin-top: 46px;
-    margin-bottom: 40px;
-    margin-left: 40px;
-    &__name{
-      display: inline-block;
-      font-size: 20px;
-    }
-    &__date{
-      display: inline-block;
-      font-size: 12px;
-      color: #999999;
-      margin-left: 10px;
-    }
-    &__text{
-      padding-top: 10px;
+  .contents{
+    margin-left: 300px;
+    padding-top: 96px;
+    padding-bottom: 100px;
+    &__messages{
+      .message{
+        margin-top: 46px;
+        margin-bottom: 40px;
+        margin-left: 40px;
+        @include message_block;
+      }
     }
   }
-  &__bottom{
+  .footer{
     background-color: rgb(224, 221, 221);
     height: 100px;
     width: calc(100vw - 300px);
     position: absolute;
     bottom: 0;
-    &--white{
-      background-color:$white;
-      width: 900px;
+    right: 0px;
+    position: fixed;
+    .form__message{
+      float: left;
       height: 50px;
-      margin: 25px 0 25px 40px;
-      padding-left: 10px;
-      font-size: 16px;
-      color: #434a54;
-      line-height: 50px;
+      width: calc(100vw - 500px);
+      bottom: 25px;
+      margin-top: 50px;
+      margin-left: 40px;
       position: relative;
       float: left;
-      label.contents__bottom__file{
-        position: absolute;
-        right: 10px;
-        input.hidden{
+      padding-left: 10px;
+    } 
+    .form__mask{
+      display: inline-block;
+      .hidden{
         display: none;
-        }
+      }
+      .icon{
+        position: absolute;
+        right: 170px;
+        font-size: 25px;
+        margin-top: 20px;
       }
     }
-    &__send{
+    .button{
       display: inline-block;
-      background-color: $light_blue;
       height: 50px;
       width: 100px;
-      margin-left: 15px;
-      margin-top: 25px;
-      font-size: 20px;
-      text-align: center;
-      line-height: 50px;
       color: $white;
+      float: right;
+      margin-right: 40px;
+      margin-top: 25px;
+      line-height: 50px;
+      background-color:$light_blue;
     }
   }
 }
+
 
 

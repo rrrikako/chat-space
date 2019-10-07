@@ -3,13 +3,16 @@
   height: 100vh;
   width: 300px;
   float: left;
-  .header{
+  position: fixed;
+  top: 0px;
+  &__header{
     background-color: #202b38;
     height: 96px;
     padding-left: 20px;
     margin-bottom: 20px;
     position: relative;
     font-weight: bold;
+    width: 280px;
     .header__name{
       display: inline-block;
       font-size: 16px;
