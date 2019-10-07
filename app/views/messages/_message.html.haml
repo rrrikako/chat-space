@@ -1,0 +1,7 @@
+.message
+  .message__user__name
+    = message.user.name
+  .message__created__at
+    = message.created_at.strftime("%Y/%m/%d %H:%M")
+  .message__content
+    = message.content

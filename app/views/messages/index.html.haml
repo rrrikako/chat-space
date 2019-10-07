@@ -2,19 +2,14 @@
 .contents
   .contents__top
     .contents__top__logo
-      sample
+      = @group.name
     %button.contents__top__edit
-      = link_to edit_group_path(1), class: "contents__top__edit__logo" do
+      = link_to edit_group_path(@group), class: "contents__top__edit__logo" do
         Edit
     .contents__top__member
-      Member: sample
-  .contents__li
-    .contents__li__name
-      seo
-    .contents__li__date
-      2019/05/22(Mon) 11:45
-    .contents__li__text
-      Hello world!
+      Member: 
+  .contents__messages
+    = render @messages
   .contents__bottom
     .form
       = form_for [@group, @message] do |f|
@@ -24,8 +19,8 @@
             = fa_icon 'picture-o', class: 'icon'
             = f.file_field :image, class: 'hidden'
         = f.submit 'Send', class: 'button'
-      
-  
+
+
 
 
 

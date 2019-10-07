@@ -1,0 +1,19 @@
+@mixin message_block{
+  .message__user__name{
+    display: inline-block;
+    font-size: 16px;
+    color: $black;
+  }
+  .message__created__at{
+    display: inline-block;
+    font-size: 12px;
+    color: $light_gray;
+    margin-left: 10px;
+  }
+  .message__content{
+    padding-top: 10px;
+    font-size: 14px;
+    color: $black;
+    font-weight: bold;
+  }
+}

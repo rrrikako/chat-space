@@ -39,22 +39,12 @@
       }
     }
   }
-  &__li{
-    margin-top: 46px;
-    margin-bottom: 40px;
-    margin-left: 40px;
-    &__name{
-      display: inline-block;
-      font-size: 20px;
-    }
-    &__date{
-      display: inline-block;
-      font-size: 12px;
-      color: #999999;
-      margin-left: 10px;
-    }
-    &__text{
-      padding-top: 10px;
+  &__messages{
+    .message{
+      margin-top: 46px;
+      margin-bottom: 40px;
+      margin-left: 40px;
+      @include message_block;
     }
   }
   &__bottom{
