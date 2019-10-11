@@ -33,8 +33,8 @@ $(function(){
     .done(function(data){
       var html = buildMessage(data);
       $('.contents__messages').append(html);
-      $('#message_content').val(''); 
       $('.button').attr('disabled', false);
+      $("#new_message")[0].reset();
       var target = $('.message').last();
       $("html,body").animate({scrollTop:target.offset().top});
     })
