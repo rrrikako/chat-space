@@ -53,8 +53,9 @@
   .contents{
     margin-left: 300px;
     padding-top: 96px;
-    padding-bottom: 100px;
+    margin-bottom: 100px;
     &__messages{
+      padding-bottom: 5px;
       .message{
         margin-top: 46px;
         margin-bottom: 40px;
