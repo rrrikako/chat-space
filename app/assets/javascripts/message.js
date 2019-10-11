@@ -1,6 +1,6 @@
 $(function(){
   function buildMessage(message){
-    var image = message.image ? `<img class="lower-message__image" src=${message.image}>` : "";
+    var image = message.image.url ? `<img class="lower-message__image" src=${message.image.url}>` : "";
     var html = `<div class="message">
                   <div class="message__user__name">
                     ${message.user_name}
@@ -33,9 +33,13 @@ $(function(){
     .done(function(data){
       var html = buildMessage(data);
       $('.contents__messages').append(html);
+      $('#message_content').val(''); 
+      $('.button').attr('disabled', false);
+      var target = $('.message').last();
+      $("html,body").animate({scrollTop:$(target).offset().top});
     })
-    .fail(function(data){
+    .fail(function(){
       alert('error');
-    })
-  })
+    });
+  });
 })
