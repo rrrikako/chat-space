@@ -36,7 +36,7 @@ $(function(){
       $('#message_content').val(''); 
       $('.button').attr('disabled', false);
       var target = $('.message').last();
-      $("html,body").animate({scrollTop:$(target).offset().top});
+      $("html,body").animate({scrollTop:target.offset().top});
     })
     .fail(function(){
       alert('error');
