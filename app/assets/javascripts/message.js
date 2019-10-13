@@ -42,4 +42,33 @@ $(document).on('turbolinks:load', function(){
       alert('error');
     });
   });
+
+  var reloadMessages = function(){
+    var presentHTML = window.location.href;
+    if (presentHTML.match(/\/groups\/\d+\/messages/)){
+    last_message_id = $('.message:last').data("id");  
+    $.ajax({
+      url: 'api/messages',
+      type: 'get',
+      dataType: 'json',
+      data: {id: last_message_id}
+    })
+    .done(function(messages){
+      var innerHTML = '';
+      messages.forEach(function(message){
+        innerHTML = buildMessage(message);
+        $('.contents__messages').append(innerHTML);
+        var target = $('.message').last();
+        $("html,body").animate({scrollTop:target.offset().top});
+      })
+    })
+    .fail(function(){
+      console.log('error');
+      })
+    }
+    else {
+      clearInterval(interval)
+    }
+  }
+  setInterval(reloadMessages, 5000);
 })
